@@ -9,17 +9,17 @@ export default function Hero() {
     >
       {/* Texto */}
       <div className="lg:w-1/2 w-full text-center lg:text-left">
-        <p className="text-gray-300 mb-4 text-lg">Web Developer</p>
+        <p className="text-[#1f1f1f] mb-4 text-lg">Web Developer</p>
 
-        <h2 className="text-amber-50 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+        <h2 className="text-amber-50 vend-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           Olá, tudo bom?
         </h2>
 
-        <h2 className="text-emerald-400 italic drop-shadow-lg text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-3">
+        <h2 className="text-emerald-400 vend-sans drop-shadow-lg text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-3">
           Sou o Iago Bruno
         </h2>
 
-        <p className="text-amber-50 mt-6 text-[17px] sm:text-[20px] md:text-[22px] leading-relaxed">
+        <p className="text-[#C9C9C9] mt-6  sm:text-[16px] md:text-[18px] leading-relaxed">
           Desenvolvedor Full Stack especializado em JavaScript/TypeScript, com
           foco em soluções robustas usando Node, React, Next e MySql/MongoDb.
         </p>
