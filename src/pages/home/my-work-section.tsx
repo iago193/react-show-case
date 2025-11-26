@@ -33,7 +33,7 @@ export default function MyWork() {
 
         {/* Backend */}
         <motion.div
-          className="bg-blue-700/50 p-10 text-amber-50 w-full min-w-[350px] max-w-[600px] rounded-2xl relative"
+          className="bg-blue-700/50 p-10 shadow-2xl text-amber-50 w-full min-w-[350px] max-w-[600px] rounded-2xl relative"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -65,7 +65,7 @@ export default function MyWork() {
 
         {/* Frontend */}
         <motion.div
-          className="bg-blue-700/50 p-10 mt-5 text-amber-50 w-full min-w-[350px] max-w-[600px] rounded-2xl relative"
+          className="bg-blue-700/50 shadow-2xl p-10 mt-5 text-amber-50 w-full min-w-[350px] max-w-[600px] rounded-2xl relative"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}

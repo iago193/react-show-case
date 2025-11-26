@@ -9,7 +9,7 @@ export default function Hero() {
     >
       {/* Texto */}
       <div className="lg:w-1/2 w-full text-center lg:text-left">
-        <p className="text-[#1f1f1f] mb-4 text-lg">Web Developer</p>
+        <p className="text-[#1f1f1f] vend-sans px-2 mb-4 text-md">Web Developer</p>
 
         <h2 className="text-amber-50 vend-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           Olá, tudo bom?

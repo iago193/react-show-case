@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import imagesSkills from "../../utils/image-skill";
+import { imagesSkills } from "../../utils/sprite";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type SkillKey = keyof typeof imagesSkills;
@@ -9,7 +9,7 @@ export default function SkillsSection() {
 
   const allSkills: SkillKey[] = [
     "css","html","js","mysql","mongo","git","github",
-    "react","next","node","tailwind"
+    "react","next","node","docker","tailwind"
   ];
 
   const [index, setIndex] = useState(0);
