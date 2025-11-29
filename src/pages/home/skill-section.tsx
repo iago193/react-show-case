@@ -83,7 +83,7 @@ export default function SkillsSection() {
 
           <button
             onClick={()=>paginate(-1)}
-            className="absolute left-4 z-20 bg-blue-700/30 hover:bg-blue-700/50 p-3 rounded-full"
+            className="absolute left-4 z-1 bg-blue-700/30 hover:bg-blue-700/50 p-3 rounded-full"
           >
             <ChevronLeft size={26}/>
           </button>
@@ -145,7 +145,7 @@ export default function SkillsSection() {
 
           <button
             onClick={()=>paginate(1)}
-            className="absolute right-4 z-20 bg-blue-700/30 hover:bg-blue-700/50 p-3 rounded-full"
+            className="absolute right-4 z-1 bg-blue-700/30 hover:bg-blue-700/50 p-3 rounded-full"
           >
             <ChevronRight size={26}/>
           </button>

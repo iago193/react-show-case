@@ -1,11 +1,15 @@
 import works from "../../data/works";
+import gallery from '../../utils/images-gallery';
 
 export default function MyProject() {
+
+  console.log(gallery);
+
   return (
     <section id="projects" className="w-full min-h-screen flex items-center">
       <div className="w-full flex flex-col">
         <h1 className="mb-[30px]">texte</h1>
-        <div className="w-full pb-10 flex overflow-x-auto px-2">
+        <div className="w-full pb-10 flex flex-wrap px-2">
           {works.map((work, index) => (
             <div
               key={index}

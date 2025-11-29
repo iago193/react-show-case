@@ -2,7 +2,7 @@ import { Link } from "react-scroll";
 
 export function Header() {
   return (
-    <header className="w-full fixed z-10 top-5 md:top-10">
+    <header className="w-full fixed z-2 top-5 md:top-10">
       <div className="bg-blue-700/50 backdrop-blur-md flex justify-between w-[100%] md:w-[70%] mx-auto p-2 md:rounded-[5px]">
         <h2
           className="text-emerald-400 google-sans-code text-3xl hidden md:block">
