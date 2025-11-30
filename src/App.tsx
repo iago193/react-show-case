@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Gallery />
+        {/* <Gallery /> */}
         <Header />
         <Routers />
       </BrowserRouter>
