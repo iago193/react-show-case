@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaHtml5,FaCog } from "react-icons/fa";
-import { style } from "../../styles";
+import { style } from "../styles";
 import { useCallback } from "react";
 
 export default function MyWork() {
@@ -25,7 +25,7 @@ export default function MyWork() {
   return (
     <section
       id="my-work"
-      className="w-full flex flex-col md:flex-row justify-center items-start gap-10 md:gap-20 mt-32 md:mt-72 mb-20"
+      className="w-full flex flex-col md:flex-row justify-center items-start gap-10 md:gap-20 mb-20"
     >
 
       {/* Lado esquerdo */}

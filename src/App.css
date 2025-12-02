@@ -35,6 +35,10 @@ button {
   cursor: pointer;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .img-effect {
   transition: transform 0.3s ease; /* animação suave */
 }

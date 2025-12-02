@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { imagesSkills } from "../../assets";
+import { imagesSkills } from "../assets";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type SkillKey = keyof typeof imagesSkills;
@@ -63,7 +63,7 @@ export default function SkillsSection() {
 
 
   return (
-    <section className="w-full md:mt-72 mt-32 p-4">
+    <section className="w-full mt-32 p-4">
 
       <h2 className={`text-emerald-400 px-2 vend-sans text-[45px]`}>
         Habilidades

@@ -1,11 +1,11 @@
-import Logo from "../../assets/img/logo.jpeg";
+import Logo from "../assets/img/logo.jpeg";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
     <section
       id="hero-section"
-      className="w-full flex flex-col-reverse lg:flex-row justify-center items-center lg:items-start gap-10 px-6 md:mt-80 mt-32 md:mb-[500px] mb-60"
+      className="w-full min-h-screen flex flex-col-reverse lg:flex-row justify-center items-center lg:items-start gap-10 px-6 mb-40 md:mb-5 mt-20 sm:mt-10 md:mt-50"
     >
       {/* Texto */}
       <div className="lg:w-1/2 w-full text-center lg:text-left">
