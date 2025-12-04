@@ -35,6 +35,17 @@ button {
   cursor: pointer;
 }
 
+::placeholder {
+  color: rgb(93, 93, 204);
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(20, 20, 209, 0.671);
+  color: white;
+}
+
 .no-scroll {
   overflow: hidden;
 }

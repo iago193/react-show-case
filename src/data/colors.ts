@@ -18,6 +18,7 @@ const colors = {
   ReduxColor: "#764ABC",
   ViteColor: "#646CFF",
   SplineColor: "#00FFD1",
+  PHPColor: "#777BB4",
 };
 
 export default colors

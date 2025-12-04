@@ -14,6 +14,8 @@ import tailwind from '../assets/img/icones/tailwind.png';
 
 // images from projects
 import portfolio from '../assets/projects/portfolio.png';
+import schooldesk from '../assets/projects/schooldesk.jpeg'
+import elitePizzaria from '../assets/projects/elite-pizzaria.jpeg'
 
 
 const imagesSkills = {
@@ -33,6 +35,8 @@ const imagesSkills = {
 
 const imagesProjects = {
     portfolio,
+    schooldesk,
+    elitePizzaria,
 }
 
 export { imagesSkills, imagesProjects };
