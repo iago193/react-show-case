@@ -2,10 +2,10 @@ import { Link } from "react-scroll";
 
 export function Header() {
   return (
-    <header className="w-full fixed z-2 top-0 md:top-10">
-      <div className="bg-blue-700/50 backdrop-blur-md flex justify-between w-[100%] md:w-[70%] mx-auto p-2 md:rounded-[5px]">
+    <header className="w-full lg:w-[90%] xl:w-[80%] 2xl:w-[70%] fixed z-2 top-0 md:top-10 max-w-7xl">
+      <div className="bg-blue-700/50 backdrop-blur-md flex justify-between p-2 md:rounded-xl">
         <h2
-          className="text-emerald-400 google-sans-code text-3xl hidden md:block">
+          className="text-emerald-400 google-sans-code text-3xl hidden lg:block">
           {'const name = useDevName("Iago Bruno");'}
         </h2>
         <nav className="text-gray-300 font-bold md:text-2xl text-[20px]">
@@ -26,7 +26,7 @@ export function Header() {
               </Link>
             </li>
             <li>
-              <Link to="footer" smooth={true} duration={500} offset={-100}>
+              <Link to="contact" smooth={true} duration={500} offset={-100}>
                 Contato
               </Link>
             </li>

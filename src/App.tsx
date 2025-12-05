@@ -7,21 +7,19 @@ import SkillsSection from "./components/skill-section";
 import Work from "./components/work-section";
 import Hero from "./components/hero-section";
 import Project from "./components/projects-section";
-import Contact from "./components/contact-section";
+import Contact from "./components/contact";
 
 function App() {
   return (
-    <>
+    <main className="w-full lg:w-[90%] xl:w-[80%] 2xl:w-[70%] mx-auto max-w-7xl">
       <Header />
-      <main className="md:w-[100%] lg:w-[90%] xl:w-[80%] 2xl:w-[70%] md:mx-auto overflow-x-hidden max-w-[1700px]">
-        <Hero />
-        <Work />
-        <Project />
-        <SkillsSection />
-        <Contact />
-      </main>
-      < ToastContainer />
-    </>
+      <Hero />
+      <Work />
+      <Project />
+      <SkillsSection />
+      <Contact />
+      <ToastContainer />
+    </main>
   );
 }
 
