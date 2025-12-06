@@ -1,36 +1,35 @@
 import { motion } from "framer-motion";
-import { FaHtml5,FaCog } from "react-icons/fa";
+import { FaHtml5, FaCog } from "react-icons/fa";
 import { style } from "../styles";
 import { useCallback } from "react";
 
 export default function MyWork() {
+  const calcTilt = useCallback(
+    (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+      const card = e.currentTarget;
+      const rect = card.getBoundingClientRect();
 
-  const calcTilt = useCallback((e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
 
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+      const midX = rect.width / 2;
+      const midY = rect.height / 2;
 
-    const midX = rect.width / 2;
-    const midY = rect.height / 2;
+      const rotateY = ((x - midX) / midX) * 7;
+      const rotateX = ((midY - y) / midY) * 7;
 
-    const rotateY = ((x - midX) / midX) * 7;
-    const rotateX = ((midY - y) / midY) * 7;
-
-    return { rotateX, rotateY };
-  }, []);
-
+      return { rotateX, rotateY };
+    },
+    []
+  );
 
   return (
     <section
-      id="my-work"
+      id="work"
       className="w-full flex flex-col md:flex-row justify-center items-start gap-10 md:gap-20 mb-20"
     >
-
       {/* Lado esquerdo */}
       <div className="w-full md:w-1/2 p-4">
-
         {/* Backend */}
         <motion.div
           className="bg-blue-700/50 p-10 shadow-2xl text-amber-50 w-full min-w-[350px] max-w-[600px] rounded-2xl relative"
@@ -38,7 +37,6 @@ export default function MyWork() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          
           onMouseMove={(e) => {
             const { rotateX, rotateY } = calcTilt(e);
             e.currentTarget.style.transform = `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
@@ -54,8 +52,8 @@ export default function MyWork() {
           <h2 className={`${style.work.headerStyle}`}>Backend</h2>
           <p className={`${style.work.paragraph}`}>
             Atuo na integração entre o client-side e o banco de dados por meio
-            de APIs bem estruturadas e escaláveis. Dou ênfase à performance
-            das aplicações, utilizando recursos como programação assíncrona,
+            de APIs bem estruturadas e escaláveis. Dou ênfase à performance das
+            aplicações, utilizando recursos como programação assíncrona,
             execução paralela e processamento sob demanda em Node.js. Adoto
             práticas de TDD para garantir confiabilidade e mantenho uma
             arquitetura limpa e organizada, sempre alinhada aos princípios de
@@ -70,7 +68,6 @@ export default function MyWork() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
-
           onMouseMove={(e) => {
             const { rotateX, rotateY } = calcTilt(e);
             e.currentTarget.style.transform = `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
@@ -94,7 +91,6 @@ export default function MyWork() {
             profissional em cada aplicação.
           </p>
         </motion.div>
-
       </div>
 
       {/* Lado direito */}
@@ -116,9 +112,17 @@ export default function MyWork() {
           interativos em React e otimização de performance no backend com
           Node.js.
         </p>
+
+        <button className="mt-20 gradient-bg rounded-full text-gray-300 px-4 py-2 shadow-2xl transition-transform duration-200 hover:scale-105">
+          <a
+            href="/Curriculo_Iago_Bruno.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Currículo
+          </a>
+        </button>
       </motion.div>
-
     </section>
-
   );
 }

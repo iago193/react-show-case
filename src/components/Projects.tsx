@@ -1,7 +1,7 @@
 import works from "../data/works";
 import github from "../assets/img/github-card.png";
 import { GrGallery } from "react-icons/gr";
-import Gallery from "./gallery";
+import Gallery from "./Gallery";
 import { useEffect, useState } from "react";
 import type { GalleryItem } from "../types/gallery";
 import { toast } from "react-toastify";
@@ -118,7 +118,7 @@ export default function MyProject() {
               key={index}
               id="project-card"
               data-index={index}
-              className="bg-blue-700/50 h-[450px] w-[300px] rounded-2xl shadow-2xl mr-6 mb-6
+              className="bg-blue-700/50 h-[450px] w-[290px] rounded-2xl shadow-2xl mr-6 mb-6
                          transition-all duration-700 ease-out"
               style={{
                 transform: `

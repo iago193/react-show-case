@@ -1,6 +1,7 @@
 import { TbBrandWhatsappFilled } from "react-icons/tb";
 import { BsGithub } from "react-icons/bs";
 import { MdMarkEmailUnread } from "react-icons/md";
+import { style } from "../styles";
 
 export default function Contact() {
   const sendMessage = (e: React.FormEvent<HTMLFormElement>) => {
@@ -37,11 +38,11 @@ ${text}
   };
 
   return (
-    <section id="contact" className="w-full min-h-screen md:mt-20">
+    <section id="contact" className="w-full min-h-screen mt-40">
       <div className="h-screen flex flex-col justify-center items-center px-2">
         <div className="w-full flex justify-baseline flex-col px-4 mb-6">
-          <h2>Contato</h2>
-          <p>Teste</p>
+          <h2 className="text-emerald-400 vend-sans text-[45px]">Contato</h2>
+          <p className="text-[15px] text-[#555353]">Preencha o formulário e vamos conversar!</p>
         </div>
         <form
           onSubmit={sendMessage}
@@ -52,7 +53,7 @@ ${text}
               Nome
             </label>
             <input
-              className="w-full bg-blue-700/50 backdrop-blur-md p-3 rounded-2xl shadow-2xl"
+              className={`w-full ${style.inputGroup} p-3 rounded-2xl shadow-2xl`}
               id="name"
               name="name"
               type="text"
@@ -65,7 +66,7 @@ ${text}
               E-mail
             </label>
             <input
-              className="w-full bg-blue-700/50 backdrop-blur-md p-3 rounded-2xl shadow-2xl"
+              className={`w-full ${style.inputGroup} p-3 rounded-2xl shadow-2xl`}
               id="email"
               name="email"
               type="email"
@@ -78,7 +79,7 @@ ${text}
               Número
             </label>
             <input
-              className="w-full bg-blue-700/50 backdrop-blur-md p-3 rounded-2xl shadow-2xl"
+              className={`w-full ${style.inputGroup} p-3 rounded-2xl shadow-2xl`}
               id="number"
               name="number"
               type="number"
@@ -91,7 +92,7 @@ ${text}
               Assunto
             </label>
             <textarea
-              className="w-full bg-blue-700/50 backdrop-blur-md p-10 rounded-2xl resize-none shadow-2xl"
+              className={`w-full ${style.inputGroup} p-10 rounded-2xl resize-none shadow-2xl`}
               id="textarea"
               name="textarea"
               placeholder="Fale um pouco sobre o assunto do contato."

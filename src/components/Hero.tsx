@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export default function Hero() {
   return (
     <section
-      id="hero-section"
+      id="hero"
       className="w-full min-h-screen flex flex-col-reverse lg:flex-row justify-center items-center lg:items-start gap-10 px-6 mb-40 lg:mb-5 mt-20 sm:mt-10 md:mt-50"
     >
       {/* Texto */}
