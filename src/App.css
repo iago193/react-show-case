@@ -31,6 +31,10 @@
     font-weight: bold;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   a {
     text-decoration: none;
     cursor: pointer;
@@ -88,6 +92,11 @@
 
 @layer utilities {
   .gradient-bg {
-    background: linear-gradient(90deg,rgba(105, 240, 117, 1) 0%, rgba(22, 39, 224, 1) 53%, rgba(5, 15, 66, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(105, 240, 117, 1) 0%,
+      rgba(22, 39, 224, 1) 53%,
+      rgba(5, 15, 66, 1) 100%
+    );
   }
 }
