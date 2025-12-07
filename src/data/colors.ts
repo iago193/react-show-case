@@ -12,7 +12,7 @@ const colors = {
   DockerColor: "#2496ED",
   MongoDBColor: "#47A248",
   MySQLColor: "#00758F",
-  PrismaColor: "#0C344B",
+  PrismaColor: "#91F527",
   ExpressColor: "#000000",
   LinuxColor: "#FCC624",
   ReduxColor: "#764ABC",

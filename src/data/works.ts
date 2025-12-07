@@ -4,20 +4,19 @@ import gallery from "../utils/images-gallery";
 
 const works = [
   {
-    title: "Portfólio 3D",
+    title: "Portfólio",
     description:
       "Um portfólio dinâmico em React JS com gráficos 3D imersivos e animações fluidas para uma experiência de usuário envolvente. Inclui seções interativas como Sobre, Educação, Projetos, Conectar e Contato. 🎨💻",
-    image: imagesProjects.portfolio,
+    image: imagesProjects.reactShowCase,
     features: [
       { name: "JavaScript", color: colors.JavaScriptColor },
       { name: "React", color: colors.ReactColor },
       { name: "TypeScript", color: colors.TypeScriptColor },
-      { name: "Spline", color: colors.SplineColor },
       { name: "Tailwind", color: colors.TailwindColor },
     ],
 
     url: "https://github.com/iago193/3D-Portfolio.git",
-    gallery: gallery.portfolio,
+    gallery: gallery.reactShowCase,
   },
 
   {
@@ -30,6 +29,7 @@ const works = [
       { name: "React", color: colors.ReactColor },
       { name: "TypeScript", color: colors.TypeScriptColor },
       { name: "Tailwind", color: colors.TailwindColor },
+      { name: "Prisma", color: colors.PrismaColor },
     ],
     url: "https://github.com/iago193/SchoolDesk",
     gallery: gallery.schooldesk,

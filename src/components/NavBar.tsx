@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
+import { style } from "../styles";
 
 export function Header() {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
@@ -68,29 +69,69 @@ export function Header() {
           ${isNavBarOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}
         `}
       >
-        <ul className="flex flex-col gap-4 text-4xl py-10 px-5">
+        <ul className="flex flex-col gap-4 text-4xl py-10 px-5 relative">
           <li>
-            <Link onClick={toggleNavBar} to="hero" offset={-250}>
+            <Link
+              className={"group"}
+              onClick={toggleNavBar}
+              to="hero"
+              offset={-250}
+            >
+              <img
+                className={`${style.previewNavBar}`}
+                src="/public/preview/hero.png"
+                alt="hero"
+              />
               Home
             </Link>
-          </li>
+          </li >
           <li>
-            <Link onClick={toggleNavBar} to="work" offset={-150}>
+            <Link
+              className={"group"}
+              onClick={toggleNavBar}
+              to="work"
+              offset={-150}
+            >
+              <img
+                className={`${style.previewNavBar}`}
+                src="/public/preview/work.png"
+                alt="hero"
+              />
               Sobre
             </Link>
           </li>
           <li>
-            <Link onClick={toggleNavBar} to="projects">
+            <Link className={"group"} onClick={toggleNavBar} to="projects">
+              <img
+                className={`${style.previewNavBar}`}
+                src="/public/preview/projects.png"
+                alt="hero"
+              />
               Projetos
             </Link>
           </li>
           <li>
-            <Link onClick={toggleNavBar} to="skills" offset={-250}>
+            <Link
+              className={"group"}
+              onClick={toggleNavBar}
+              to="skills"
+              offset={-250}
+            >
+              <img
+                className={`${style.previewNavBar}`}
+                src="/public/preview/skills.png"
+                alt="hero"
+              />
               Habilidades
             </Link>
           </li>
           <li>
-            <Link onClick={toggleNavBar} to="contact">
+            <Link className={"group"} onClick={toggleNavBar} to="contact">
+              <img
+                className={`${style.previewNavBar}`}
+                src="/public/preview/contact.png"
+                alt="hero"
+              />
               Contato
             </Link>
           </li>
