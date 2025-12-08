@@ -8,7 +8,7 @@ type SkillKey = keyof typeof imagesSkills;
 export default function SkillsSection() {
 
   const allSkills: SkillKey[] = [
-    "css","html","js","mysql","mongo","git","github",
+    "css","html","js","ts","mysql","mongo","git","github",
     "react","next","node","docker","tailwind"
   ];
 

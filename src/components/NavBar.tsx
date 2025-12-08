@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { style } from "../styles";
+import { previewNavBar } from "../assets";
 
 export function Header() {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
@@ -79,7 +80,7 @@ export function Header() {
             >
               <img
                 className={`${style.previewNavBar}`}
-                src="/public/preview/hero.png"
+                src={previewNavBar.hero}
                 alt="hero"
               />
               Home
@@ -94,8 +95,8 @@ export function Header() {
             >
               <img
                 className={`${style.previewNavBar}`}
-                src="/public/preview/work.png"
-                alt="hero"
+                src={previewNavBar.work}
+                alt="work"
               />
               Sobre
             </Link>
@@ -104,8 +105,8 @@ export function Header() {
             <Link className={"group"} onClick={toggleNavBar} to="projects">
               <img
                 className={`${style.previewNavBar}`}
-                src="/public/preview/projects.png"
-                alt="hero"
+                src={previewNavBar.projects}
+                alt="projects"
               />
               Projetos
             </Link>
@@ -119,8 +120,8 @@ export function Header() {
             >
               <img
                 className={`${style.previewNavBar}`}
-                src="/public/preview/skills.png"
-                alt="hero"
+                src={previewNavBar.skills}
+                alt="skills"
               />
               Habilidades
             </Link>
@@ -129,8 +130,8 @@ export function Header() {
             <Link className={"group"} onClick={toggleNavBar} to="contact">
               <img
                 className={`${style.previewNavBar}`}
-                src="/public/preview/contact.png"
-                alt="hero"
+                src={previewNavBar.contact}
+                alt="contact"
               />
               Contato
             </Link>
