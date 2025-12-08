@@ -15,7 +15,7 @@ const works = [
       { name: "Tailwind", color: colors.TailwindColor },
     ],
 
-    url: "https://github.com/iago193/3D-Portfolio.git",
+    url: "https://github.com/iago193/react-show-case",
     gallery: gallery.reactShowCase,
   },
 
