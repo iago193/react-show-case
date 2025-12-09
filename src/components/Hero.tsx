@@ -49,9 +49,9 @@ export default function Hero() {
       </div>
 
       {/* Imagem */}
-      <div className="lg:w-1/2 w-full flex justify-center">
+      <div className="lg:w-1/2 w-full flex justify-center bubble-border">
         <img
-          className="rounded-full max-w-[450px] w-[90%] sm:w-[60%] lg:w-[500px] shadow-lg"
+          className="rounded-full max-w-[450px] w-[90%] sm:w-[60%] lg:w-[500px] shadow-lg bubble-img"
           src={Logo}
           alt="Iago Bruno"
         />

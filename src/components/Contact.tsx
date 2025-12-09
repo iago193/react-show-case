@@ -1,143 +1,114 @@
 import { TbBrandWhatsappFilled } from "react-icons/tb";
 import { BsGithub } from "react-icons/bs";
 import { MdMarkEmailUnread } from "react-icons/md";
-import { style } from "../styles";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function Contact() {
-  const sendMessage = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
 
-    // Captura automática dos dados
-    const data = Object.fromEntries(new FormData(e.currentTarget));
-
-    const name = data.name as string;
-    const email = data.email as string;
-    const number = data.number as string;
-    const text = data.textarea as string;
-
-    // Monta a mensagem formatada
-    const mensagem = `
-Olá Iago! Estou entrando em contato pelo seu portfólio.
-
-👤 *Nome:* ${name}
-📧 *Email:* ${email}
-📱 *Telefone:* ${number}
-
-💬 *Mensagem:*
-${text}
-`;
-
-    // Seu número de WhatsApp
-    const numero = "558491454957";
-
-    // URL final
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-
-    // Abre no WhatsApp
-    window.open(url, "_blank");
-  };
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "-150px" });
 
   return (
-    <section id="contact" className="w-full min-h-screen mt-40">
-      <div className="h-screen flex flex-col justify-center items-center px-2">
-        <div className="w-full flex justify-baseline flex-col px-4 mb-6">
-          <h2 className="text-emerald-400 vend-sans text-[45px]">Contato</h2>
-          <p className="text-[15px] text-[#555353]">Preencha o formulário e vamos conversar!</p>
-        </div>
-        <form
-          onSubmit={sendMessage}
-          className="flex flex-col md:flex-row md:flex-wrap w-full px-2"
+    <section id="contact" className="w-full mt-20">
+
+      {/* ANIMAÇÃO DA SECTION */}
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 120 }}
+        animate={
+          isInView
+            ? {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.9,
+                  ease: "easeOut",
+                  type: "spring",
+                  stiffness: 80,
+                  damping: 12,
+                },
+              }
+            : {}
+        }
+        className="
+          h-[50vh] flex flex-col justify-center items-center px-2 
+          bg-gradient-to-t from-black/10 via-black/40 to-black/60 
+          backdrop-blur-xl shadow-xl shadow-black/30 rounded-xl
+        "
+      >
+
+        {/* TÍTULO COM PARALLAX */}
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="text-emerald-400 vend-sans mb-10 text-[45px]"
         >
-          <div className="md:w-[49%] w-full mr-[2%] mb-5">
-            <label className="block text-gray-400 px-2" htmlFor="name">
-              Nome
-            </label>
-            <input
-              className={`w-full ${style.inputGroup} p-3 rounded-2xl shadow-2xl`}
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Digite seu nome."
-            />
-          </div>
+          Contato
+        </motion.h2>
 
-          <div className="md:w-[49%] w-full mb-10">
-            <label className="block text-gray-400 px-2" htmlFor="email">
-              E-mail
-            </label>
-            <input
-              className={`w-full ${style.inputGroup} p-3 rounded-2xl shadow-2xl`}
-              id="email"
-              name="email"
-              type="email"
-              placeholder="Digite seu Email."
-            />
-          </div>
+        {/* IMAGEM + TEXTO COM FADE */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.9, delay: 0.35, ease: "easeOut" }}
+          className="relative mt-[-40px]"
+        >
+          <h3 className="text-gray-400 text-[48px] mb-4">
+            iago.silva6969@gmail.com
+          </h3>
+        </motion.div>
 
-          <div className="w-[100%] mb-10">
-            <label className="block text-gray-400 px-2" htmlFor="number">
-              Número
-            </label>
-            <input
-              className={`w-full ${style.inputGroup} p-3 rounded-2xl shadow-2xl`}
-              id="number"
-              name="number"
-              type="number"
-              placeholder="Digite seu Nuḿero de telefone."
-            />
-          </div>
+        {/* ÍCONES — ANIMAÇÃO COM DELAY INDIVIDUAL */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="text-center w-full"
+        >
+          <div className="text-blue-500 flex justify-center gap-5">
 
-          <div className="w-[100%]">
-            <label className="block text-gray-400 px-2" htmlFor="textarea">
-              Assunto
-            </label>
-            <textarea
-              className={`w-full ${style.inputGroup} p-10 rounded-2xl resize-none shadow-2xl`}
-              id="textarea"
-              name="textarea"
-              placeholder="Fale um pouco sobre o assunto do contato."
-            />
-          </div>
-          <button
-            className="mt-10 bg-blue-500 p-2 rounded-lg text-blue-100 shadow-2xl"
-            type="submit"
-          >
-            Enviar
-          </button>
-        </form>
-
-        <div className="text-center w-full mt-10">
-          <h3 className="text-gray-400 mt-5">Entre em contato direto.</h3>
-          <div className="text-blue-500 flex justify-center gap-5 mt-5">
-            {/* WhatsApp */}
-            <a
+            {/* WHATS */}
+            <motion.a
               href="https://wa.me/558491454957"
               target="_blank"
               rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.6 }}
             >
               <TbBrandWhatsappFilled size={40} />
-            </a>
+            </motion.a>
 
-            {/* GitHub */}
-            <a
+            {/* GITHUB */}
+            <motion.a
               href="https://github.com/iago193"
               target="_blank"
               rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.75 }}
             >
               <BsGithub size={40} />
-            </a>
+            </motion.a>
 
-            {/* Email */}
-            <a
+            {/* EMAIL */}
+            <motion.a
               href="mailto:iago.silva6969@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.9 }}
             >
               <MdMarkEmailUnread size={40} />
-            </a>
+            </motion.a>
+
           </div>
-        </div>
-      </div>
+        </motion.div>
+
+      </motion.div>
     </section>
   );
 }

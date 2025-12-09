@@ -11,15 +11,17 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <main className="w-full lg:w-[90%] xl:w-[80%] 2xl:w-[70%] mx-auto max-w-7xl overflow-x-hidden">
-      <Header />
-      <Hero />
-      <Work />
-      <Project />
-      <SkillsSection />
+    <>
+      <main className="w-full lg:w-[90%] xl:w-[80%] 2xl:w-[70%] mx-auto max-w-7xl overflow-x-hidden">
+        <Header />
+        <Hero />
+        <Work />
+        <Project />
+        <SkillsSection />
+        <ToastContainer />
+      </main>
       <Contact />
-      <ToastContainer />
-    </main>
+    </>
   );
 }
 
