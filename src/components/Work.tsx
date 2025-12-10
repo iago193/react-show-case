@@ -25,13 +25,13 @@ export default function MyWork() {
   return (
     <section
       id="work"
-      className="w-full flex flex-col md:flex-row justify-center items-start gap-10 md:gap-20 mb-20"
+      className="w-full flex flex-col md:flex-row justify-center px-3 items-start gap-10 md:gap-20 mb-20"
     >
       {/* Lado esquerdo */}
       <div className="w-full md:w-1/2 p-2">
         {/* Backend */}
         <motion.div
-          className="bg-blue-700/50 p-10 text-amber-50 w-full min-w-[350px] max-w-[600px] rounded-2xl relative"
+          className="bg-blue-700/50 p-10 text-amber-50 w-full min-w-[350px] max-w-[590px] rounded-2xl relative"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -62,7 +62,7 @@ export default function MyWork() {
 
         {/* Frontend */}
         <motion.div
-          className="bg-blue-700/50 p-10 mt-5 text-amber-50 w-full min-w-[350px] max-w-[600px] rounded-2xl relative"
+          className="bg-blue-700/50 p-10 mt-5 text-amber-50 w-full min-w-[350px] max-w-[595px] rounded-2xl relative"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -94,7 +94,7 @@ export default function MyWork() {
 
       {/* Lado direito */}
       <motion.div
-        className="p-10 w-full min-w-[350px] max-w-[600px]"
+        className="p-10 w-full min-w-[350px] max-w-[595px]"
         initial={{ opacity: 0, x: 80 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}

@@ -2,22 +2,15 @@ import works from "../data/works";
 import github from "../assets/img/github-card.png";
 import { GrGallery } from "react-icons/gr";
 import Gallery from "./Gallery";
-import { useEffect, useState } from "react";
+import { useState, useCallback } from "react";
 import type { GalleryItem } from "../types/gallery";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 
 export default function MyProject() {
-  const [isgalleryOpen, setIsGalleryOpen] = useState(false);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [imagesGallery, setImagesGallery] = useState<GalleryItem[]>([]);
   const [titleGallery, setTitleGallery] = useState("");
-
-  useEffect(() => {
-    if (isgalleryOpen) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
-    }
-  }, [isgalleryOpen]);
 
   const openGallery = (images: GalleryItem[], title: string) => {
     setImagesGallery(images);
@@ -25,63 +18,20 @@ export default function MyProject() {
     setIsGalleryOpen(true);
   };
 
-  // Estado de inclinação de cada card
-  const [tiltStyles, setTiltStyles] = useState<{ [key: number]: string }>({});
-
-  const handleMouseMove = (
-    e: React.MouseEvent<HTMLDivElement>,
-    index: number
-  ) => {
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateX = ((y - centerY) / centerY) * 10;
-    const rotateY = ((x - centerX) / centerX) * 10;
-
-    setTiltStyles((prev) => ({
-      ...prev,
-      [index]: `perspective(600px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`,
-    }));
-  };
-
-  const handleMouseLeave = (index: number) => {
-    setTiltStyles((prev) => ({
-      ...prev,
-      [index]: `perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)`,
-    }));
-  };
-
-  // ---------- ANIMAÇÃO AO ENTRAR NO VIEWPORT ----------
-  const [visibleCards, setVisibleCards] = useState<{ [key: number]: boolean }>(
-    {}
+  const calcTilt = useCallback(
+    (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+      const card = e.currentTarget;
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const midX = rect.width / 2;
+      const midY = rect.height / 2;
+      const rotateY = ((x - midX) / midX) * 7;
+      const rotateX = ((midY - y) / midY) * 7;
+      return { rotateX, rotateY };
+    },
+    []
   );
-
-  useEffect(() => {
-    const cards = document.querySelectorAll("#project-card");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = Number(entry.target.getAttribute("data-index"));
-            setVisibleCards((prev) => ({ ...prev, [index]: true }));
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    cards.forEach((card) => observer.observe(card));
-
-    return () => observer.disconnect();
-  }, []);
-  // -----------------------------------------------------
 
   return (
     <section
@@ -91,7 +41,7 @@ export default function MyProject() {
       <Gallery
         images={imagesGallery}
         title={titleGallery}
-        isGalleryOpen={isgalleryOpen}
+        isGalleryOpen={isGalleryOpen}
         onClose={() => setIsGalleryOpen(false)}
       />
 
@@ -112,30 +62,27 @@ export default function MyProject() {
           </a>
         </p>
 
-        <div className="w-full pb-10 flex flex-nowrap overflow-x-auto md:flex-wrap px-2">
+        <div className="w-full pb-10 flex flex-nowrap overflow-x-auto md:flex-wrap py-4 px-2 gap-6">
           {works.map((work, index) => (
-            <div
+            <motion.div
               key={index}
-              id="project-card"
-              data-index={index}
-              className="bg-blue-700/50 h-[450px] w-[290px] min-w-[290px] rounded-2xl mr-6 mb-6
-                         transition-all duration-700 ease-out"
-              style={{
-                transform: `
-                  ${
-                    tiltStyles[index] ||
-                    "perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)"
-                  }
-                  ${
-                    !visibleCards[index]
-                      ? " translateX(-80px)"
-                      : " translateX(0px)"
-                  }
-                `,
-                opacity: visibleCards[index] ? 1 : 0,
+              className="bg-blue-700/50 h-[450px] w-[290px] min-w-[290px] rounded-2xl relative cursor-pointer"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: "easeOut",
               }}
-              onMouseMove={(e) => handleMouseMove(e, index)}
-              onMouseLeave={() => handleMouseLeave(index)}
+              onMouseMove={(e) => {
+                const { rotateX, rotateY } = calcTilt(e);
+                e.currentTarget.style.transform = `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = `perspective(700px) rotateX(0deg) rotateY(0deg)`;
+              }}
+              style={{ transition: "transform 0.15s ease-out" }}
             >
               <div className="w-full p-4 relative">
                 <img
@@ -148,16 +95,14 @@ export default function MyProject() {
                   <button
                     onClick={() => openGallery(work.gallery, work.title)}
                     type="button"
-                    className="bg-black/90 text-amber-50 rounded-[50%] flex justify-center items-center 
-                    active:scale-90 w-6 shadow-[inset_0_0_6px_2px_rgba(255,255,255,0.2)]"
+                    className="bg-black/90 text-amber-50 rounded-full flex justify-center items-center w-6 shadow-[inset_0_0_6px_2px_rgba(255,255,255,0.2)] active:scale-90"
                   >
                     <GrGallery size={12} />
                   </button>
 
                   <button
                     type="button"
-                    className="bg-black/90 block p-0.5 rounded-[50%] w-6 
-                    active:scale-90 shadow-[inset_0_0_6px_2px_rgba(255,255,255,0.2)]"
+                    className="bg-black/90 block p-0.5 rounded-full w-6 active:scale-90 shadow-[inset_0_0_6px_2px_rgba(255,255,255,0.2)]"
                   >
                     <a
                       href={work.url ?? "#"}
@@ -182,9 +127,7 @@ export default function MyProject() {
                 {work.title}
               </h2>
 
-              <p className="text-[12px] mt-4 px-4">
-                {work.description}
-              </p>
+              <p className="text-[12px] mt-4 px-4">{work.description}</p>
 
               <div className="flex flex-wrap px-4 gap-2 mt-6 text-[10px]">
                 {work.features.map((feature, i) => (
@@ -193,7 +136,7 @@ export default function MyProject() {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
