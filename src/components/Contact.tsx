@@ -5,6 +5,7 @@ import {
   MdOutlineLightMode,
   MdOutlineDarkMode,
 } from "react-icons/md";
+import { SiLinkedin } from "react-icons/si";
 import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -131,6 +132,18 @@ export default function Contact() {
             >
               <MdMarkEmailUnread size={40} />
             </motion.a>
+
+              {/* LINKEDIN */}
+            <motion.a
+              href="https://www.linkedin.com/in/iago-bruno-aa1630355/"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.9 }}
+            >
+              <SiLinkedin size={40} />
+            </motion.a>
           </div>
         </motion.div>
 
@@ -170,6 +183,7 @@ export default function Contact() {
           >
             <MdOutlineDarkMode size={25} />
           </button>
+
         </div>
         <p className="text-gray-300 mt-10">
           Feito com <span className="text-red-500">❤️</span> por mim:{" "}
