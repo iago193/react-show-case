@@ -2,7 +2,7 @@ import works from "../data/works";
 import github from "../assets/img/github-card.png";
 import { GrGallery } from "react-icons/gr";
 import Gallery from "./Gallery";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import type { GalleryItem } from "../types/gallery";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
@@ -32,6 +32,14 @@ export default function MyProject() {
     },
     []
   );
+
+  useEffect(() => {
+    if(isGalleryOpen) {
+      document.body.style.overflowY = 'hidden';
+    } else {
+      document.body.style.overflowY = 'auto';
+    }
+  },[isGalleryOpen]);
 
   return (
     <section
