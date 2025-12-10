@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { FaHtml5, FaCog } from "react-icons/fa";
-import { style } from "../styles";
 import { useCallback } from "react";
 
 export default function MyWork() {
@@ -29,10 +28,10 @@ export default function MyWork() {
       className="w-full flex flex-col md:flex-row justify-center items-start gap-10 md:gap-20 mb-20"
     >
       {/* Lado esquerdo */}
-      <div className="w-full md:w-1/2 p-4">
+      <div className="w-full md:w-1/2 p-2">
         {/* Backend */}
         <motion.div
-          className="bg-blue-700/50 p-10 shadow-2xl text-amber-50 w-full min-w-[350px] max-w-[600px] rounded-2xl relative"
+          className="bg-blue-700/50 p-10 text-amber-50 w-full min-w-[350px] max-w-[600px] rounded-2xl relative"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -49,8 +48,8 @@ export default function MyWork() {
           <div className="text-emerald-400 absolute top-6 right-8">
             <FaCog size={60} />
           </div>
-          <h2 className={`${style.work.headerStyle}`}>Backend</h2>
-          <p className={`${style.work.paragraph}`}>
+          <h2 className={`text-emerald-400 vend-sans font-bold text-4xl`}>Backend</h2>
+          <p className={`mt-10 text-md`}>
             Atuo na integração entre o client-side e o banco de dados por meio
             de APIs bem estruturadas e escaláveis. Dou ênfase à performance das
             aplicações, utilizando recursos como programação assíncrona,
@@ -63,7 +62,7 @@ export default function MyWork() {
 
         {/* Frontend */}
         <motion.div
-          className="bg-blue-700/50 shadow-2xl p-10 mt-5 text-amber-50 w-full min-w-[350px] max-w-[600px] rounded-2xl relative"
+          className="bg-blue-700/50 p-10 mt-5 text-amber-50 w-full min-w-[350px] max-w-[600px] rounded-2xl relative"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -80,8 +79,8 @@ export default function MyWork() {
           <div className="text-emerald-400 absolute top-6 right-8">
             <FaHtml5 size={60} />
           </div>
-          <h2 className={`${style.work.headerStyle}`}>Frontend</h2>
-          <p className={`${style.work.paragraph}`}>
+          <h2 className={`text-emerald-400 vend-sans font-bold text-4xl`}>Frontend</h2>
+          <p className={`mt-10 text-md`}>
             Desenvolvo interfaces modernas, responsivas e de alta performance,
             com foco em interatividade e experiência do usuário. Utilizo
             componentes reutilizáveis e estilos consistentes, sempre seguindo
@@ -101,8 +100,8 @@ export default function MyWork() {
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <h1 className="text-emerald-400 vend-sans text-[45px]">Meu Trabalho</h1>
-        <p className={`${style.work.paragraph}`}>
+        <h1 className="text-emerald-400 vend-sans font-bold text-4xl">Meu Trabalho</h1>
+        <p className={`mt-10 text-lg`}>
           Sou desenvolvedor Full Stack focado em criar aplicações web modernas e
           eficientes. Trabalho com JavaScript e TypeScript, utilizando Node.js
           no backend e React no frontend. Tenho experiência no desenvolvimento
@@ -113,9 +112,10 @@ export default function MyWork() {
           Node.js.
         </p>
 
-        <button className="mt-20 gradient-bg rounded-full text-gray-300 px-4 py-2 shadow-2xl transition-transform duration-200 hover:scale-105">
+        <button className="mt-20 transition-transform duration-200 hover:scale-105">
           <a
             href="/Curriculo_Iago_Bruno.pdf"
+            className="rounded-full p-4 py-3 shadow-2xl bg-blue-400 hover:bg-blue-600 transition duration-300 text-amber-50"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -65,7 +65,7 @@ export function Header() {
 
       <nav
         className={`
-          text-gray-300 bg-black/50 backdrop-blur-lg font-bold rounded-b-2xl
+          text-gray-300 bg-black/50 backdrop-blur-lg font-bold rounded-b-2xl md:rounded-2xl
           overflow-hidden transition-all duration-500
           ${isNavBarOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}
         `}

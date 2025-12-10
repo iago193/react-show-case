@@ -7,19 +7,20 @@ export default function Hero() {
       id="hero"
       className="w-full min-h-screen flex flex-col-reverse lg:flex-row justify-center items-center lg:items-start gap-10 px-6 mb-40 lg:mb-5 mt-20 sm:mt-10 md:mt-50"
     >
+
       {/* Texto */}
       <div className="lg:w-1/2 w-full text-center lg:text-left">
-        <p className="text-[#1f1f1f] vend-sans px-2 mb-4 text-md">Web Developer</p>
+        <p className="text-[#1f1f1f] px-2 mb-4 text-md">Web Developer</p>
 
-        <h2 className="text-amber-50 vend-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+        <h2 className="font-bold vend-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           Olá, tudo bom?
         </h2>
 
-        <h2 className="text-emerald-400 vend-sans drop-shadow-lg text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-3">
+        <h2 className="text-emerald-400 font-bold vend-sans drop-shadow-lg text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-3">
           Sou o Iago Bruno
         </h2>
 
-        <p className="text-[#C9C9C9] mt-6  sm:text-[16px] md:text-[18px] leading-relaxed">
+        <p className="mt-6  sm:text-md md:text-lg">
           Desenvolvedor Full Stack especializado em JavaScript/TypeScript, com
           foco em soluções robustas usando Node, React, Next e MySql/MongoDb.
         </p>

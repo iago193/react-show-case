@@ -65,7 +65,7 @@ export default function SkillsSection() {
   return (
     <section className="w-full mt-10 p-4" id="skills">
 
-      <h2 className={`text-emerald-400 px-2 vend-sans text-[45px]`}>
+      <h2 className={`text-emerald-400 font-bold px-2 vend-sans text-4xl`}>
         Habilidades
       </h2>
 

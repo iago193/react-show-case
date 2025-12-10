@@ -96,7 +96,7 @@ export default function MyProject() {
       />
 
       <div className="w-full flex flex-col">
-        <h2 className="text-emerald-400 vend-sans text-[45px] px-4">
+        <h2 className="text-emerald-400 vend-sans text-4xl font-bold px-4">
           Projetos
         </h2>
 
@@ -118,7 +118,7 @@ export default function MyProject() {
               key={index}
               id="project-card"
               data-index={index}
-              className="bg-blue-700/50 h-[450px] w-[290px] rounded-2xl shadow-2xl mr-6 mb-6
+              className="bg-blue-700/50 h-[450px] w-[290px] rounded-2xl mr-6 mb-6
                          transition-all duration-700 ease-out"
               style={{
                 transform: `
@@ -182,7 +182,7 @@ export default function MyProject() {
                 {work.title}
               </h2>
 
-              <p className="text-[12px] text-[#C9C9C9] mt-4 px-4">
+              <p className="text-[12px] mt-4 px-4">
                 {work.description}
               </p>
 
