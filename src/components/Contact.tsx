@@ -84,7 +84,7 @@ export default function Contact() {
           transition={{ duration: 0.9, delay: 0.35, ease: "easeOut" }}
           className="relative mt-[-40px]"
         >
-          <h3 className="text-gray-300 text-3xl sm:text-4xl vend-sans mb-4">
+          <h3 className="text-gray-300 text-2xl sm:text-4xl vend-sans mb-4">
             iago.silva6969@gmail.com
           </h3>
         </motion.div>

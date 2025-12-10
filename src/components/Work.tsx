@@ -25,13 +25,13 @@ export default function MyWork() {
   return (
     <section
       id="work"
-      className="w-full flex flex-col md:flex-row justify-center px-3 items-start gap-10 md:gap-20 mb-20"
+      className="w-full flex flex-col md:flex-row justify-center items-start gap-10 md:gap-20 mb-20"
     >
       {/* Lado esquerdo */}
-      <div className="w-full md:w-1/2 p-2">
+      <div className="w-full md:w-1/2 p-2 md:p-4">
         {/* Backend */}
         <motion.div
-          className="bg-blue-700/50 p-10 text-amber-50 w-full min-w-[350px] max-w-[590px] rounded-2xl relative"
+          className="bg-blue-700/50 p-5 sm:p-10 text-amber-50 w-full min-w-[350px] max-w-[590px] rounded-2xl relative"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -45,7 +45,7 @@ export default function MyWork() {
           }}
           style={{ transition: "transform .12s ease-out" }}
         >
-          <div className="text-emerald-400 absolute top-6 right-8">
+          <div className="text-emerald-400 absolute top-4 sm:top-6 right-8">
             <FaCog size={60} />
           </div>
           <h2 className={`text-emerald-400 vend-sans font-bold text-4xl`}>Backend</h2>
@@ -62,7 +62,7 @@ export default function MyWork() {
 
         {/* Frontend */}
         <motion.div
-          className="bg-blue-700/50 p-10 mt-5 text-amber-50 w-full min-w-[350px] max-w-[595px] rounded-2xl relative"
+          className="bg-blue-700/50 p-5 sm:p-10 mt-5 text-amber-50 w-full min-w-[350px] max-w-[600px] rounded-2xl relative"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -76,7 +76,7 @@ export default function MyWork() {
           }}
           style={{ transition: "transform .12s ease-out" }}
         >
-          <div className="text-emerald-400 absolute top-6 right-8">
+          <div className="text-emerald-400 absolute top-4 sm:top-6 right-8">
             <FaHtml5 size={60} />
           </div>
           <h2 className={`text-emerald-400 vend-sans font-bold text-4xl`}>Frontend</h2>
@@ -94,7 +94,7 @@ export default function MyWork() {
 
       {/* Lado direito */}
       <motion.div
-        className="p-10 w-full min-w-[350px] max-w-[595px]"
+        className="p-5 w-full min-w-[350px] max-w-[600px]"
         initial={{ opacity: 0, x: 80 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
