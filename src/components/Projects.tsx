@@ -112,13 +112,13 @@ export default function MyProject() {
           </a>
         </p>
 
-        <div className="w-full pb-10 flex flex-wrap px-2">
+        <div className="w-full pb-10 flex flex-nowrap overflow-x-auto md:flex-wrap px-2">
           {works.map((work, index) => (
             <div
               key={index}
               id="project-card"
               data-index={index}
-              className="bg-blue-700/50 h-[450px] w-[290px] rounded-2xl mr-6 mb-6
+              className="bg-blue-700/50 h-[450px] w-[290px] min-w-[290px] rounded-2xl mr-6 mb-6
                          transition-all duration-700 ease-out"
               style={{
                 transform: `
