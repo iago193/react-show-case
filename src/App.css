@@ -119,22 +119,6 @@
     right: 10px;
   }
 
-  @keyframes bubbleWobble {
-    0%,
-    100% {
-      border-radius: 50%;
-    }
-    25% {
-      border-radius: 55% 45% 60% 40%;
-    }
-    50% {
-      border-radius: 48% 52% 40% 60%;
-    }
-    75% {
-      border-radius: 60% 40% 55% 45%;
-    }
-  }
-
   @keyframes bubbleImageRadius {
     0%,
     100% {
@@ -149,14 +133,6 @@
     75% {
       border-radius: 62% 38% 52% 48%;
     }
-  }
-
-  .bubble-border {
-    padding: 4px;
-    border: 3px solid #ffffff22;
-    border-radius: 50%;
-    display: inline-block;
-    animation: bubbleWobble 6s ease-in-out infinite;
   }
 
   .bubble-img {

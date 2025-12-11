@@ -50,9 +50,9 @@ export default function Hero() {
       </div>
 
       {/* Imagem */}
-      <div className="lg:w-1/2 w-full flex justify-center bubble-border">
+      <div className="lg:w-1/2 w-full flex justify-center">
         <img
-          className="rounded-full max-w-[450px] w-[90%] sm:w-[60%] lg:w-[500px] shadow-lg bubble-img"
+          className="rounded-full max-w-[450px] w-[90%] sm:w-[60%] lg:w-[500px] shadow-lg bubble-img border-4 border-emerald-400"
           src={Logo}
           alt="Iago Bruno"
         />
