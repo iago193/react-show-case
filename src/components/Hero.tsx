@@ -1,4 +1,4 @@
-import Logo from "../assets/img/logo.jpeg";
+import Logo from "../assets/img/logo.webp";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
