@@ -28,7 +28,7 @@ export default function Hero() {
         {/* Botões */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-10">
           <a
-            href="https://www.linkedin.com/in/iago-bruno-aa1630355/"
+            href="https://www.linkedin.com/in/iago-bruno-developer/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-44 flex justify-center items-center gap-2 bg-emerald-400 text-black font-medium rounded-2xl py-3 hover:bg-emerald-500 transition-all"
