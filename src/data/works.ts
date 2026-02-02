@@ -4,6 +4,23 @@ import gallery from "../utils/images-gallery";
 
 const works = [
   {
+    title: "Smart Stock",
+    description:
+      "Smart Stock é um sistema inteligente de controle de estoque desenvolvido com Next.js, Express e Prisma, focado no gerenciamento de produtos, vendas e movimentações, com arquitetura escalável, API REST e atualização em tempo real.",
+    image: imagesProjects.SmartStock,
+    features: [
+      { name: "JavaScript", color: colors.JavaScriptColor },
+      { name: "Next", color: colors.NextColor },
+      { name: "TypeScript", color: colors.TypeScriptColor },
+      { name: "Tailwind", color: colors.TailwindColor },
+      { name: "Node", color: colors.NodeColor },
+    ],
+
+    url: "https://github.com/iago193/smart-stock-app.git",
+    gallery: gallery.smartStock,
+  },
+
+  {
     title: "Portfólio",
     description:
       "Um portfólio dinâmico em React JS com gráficos 3D imersivos e animações fluidas para uma experiência de usuário envolvente. Inclui seções interativas como Sobre, Educação, Projetos, Conectar e Contato. 🎨💻",
@@ -30,6 +47,7 @@ const works = [
       { name: "TypeScript", color: colors.TypeScriptColor },
       { name: "Tailwind", color: colors.TailwindColor },
       { name: "Prisma", color: colors.PrismaColor },
+      { name: "Node", color: colors.NodeColor },
     ],
     url: "https://github.com/iago193/SchoolDesk",
     gallery: gallery.schooldesk,
