@@ -1,4 +1,5 @@
 import Logo from "../assets/img/logo.webp";
+import { imagesShowCae } from "../assets/";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
@@ -50,7 +51,13 @@ export default function Hero() {
       </div>
 
       {/* Imagem */}
-      <div className="lg:w-1/2 w-full flex justify-center">
+      <div className="lg:w-1/2 w-full flex justify-center relative">
+      <img 
+      className="w-16 h-24 opacity-40 absolute top-0 left-0"
+      src={imagesShowCae.dockerGif} alt="docker" />
+            <img 
+      className="w-24 h-24 opacity-40 absolute bottom-0 right-0"
+      src={imagesShowCae.reactGif} alt="react" />
         <img
           className="rounded-full max-w-[450px] w-[90%] sm:w-[60%] lg:w-[500px] shadow-lg bubble-img border-4 border-emerald-400"
           src={Logo}

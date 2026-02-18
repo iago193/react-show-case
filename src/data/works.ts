@@ -4,6 +4,22 @@ import gallery from "../utils/images-gallery";
 
 const works = [
   {
+    title: "BrasilNow",
+    description:
+      "BrasilNow é um site de notícias desenvolvido com Next.js, React e TypeScript, focado em consumo de APIs e renderização dinâmica de conteúdo. A aplicação consome feeds RSS para exibir notícias atualizadas por categoria (Geral, Economia, Política, Mundo e Saúde).",
+    image: imagesProjects.brasilnow,
+    features: [
+      { name: "JavaScript", color: colors.JavaScriptColor },
+      { name: "Next", color: colors.NextColor },
+      { name: "TypeScript", color: colors.TypeScriptColor },
+      { name: "Tailwind", color: colors.TailwindColor }
+    ],
+
+    url: "https://github.com/iago193/brasilnow.git",
+    gallery: gallery.brasilnow,
+  },
+
+  {
     title: "Smart Stock",
     description:
       "Smart Stock é um sistema inteligente de controle de estoque desenvolvido com Next.js, Express e Prisma, focado no gerenciamento de produtos, vendas e movimentações, com arquitetura escalável, API REST e atualização em tempo real.",

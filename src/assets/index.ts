@@ -12,6 +12,8 @@ import next from "../assets/img/icones/next.png";
 import node from "../assets/img/icones/node.png";
 import react from "../assets/img/icones/react.png";
 import tailwind from "../assets/img/icones/tailwind.png";
+import dockerGif from "../assets/img/docker.gif";
+import reactGif from "../assets/img/react.gif";
 
 // preview
 import contact from "./preview/contact.png";
@@ -25,6 +27,7 @@ import reactShowCase from "../assets/projects/react-show-case.png";
 import schooldesk from "../assets/projects/schooldesk.jpeg";
 import elitePizzaria from "../assets/projects/elite-pizzaria.jpeg";
 import SmartStock from "../assets/projects/SmartStock.png";
+import brasilnow from "../assets/projects/brasilnow.png";
 
 const previewNavBar = {
   contact,
@@ -33,6 +36,11 @@ const previewNavBar = {
   skills,
   work,
 };
+
+const imagesShowCae = {
+  dockerGif,
+  reactGif,
+}
 
 const imagesSkills = {
   css,
@@ -55,6 +63,7 @@ const imagesProjects = {
   schooldesk,
   elitePizzaria,
   SmartStock,
+  brasilnow,
 };
 
-export { imagesSkills, imagesProjects, previewNavBar };
+export { imagesSkills, imagesProjects, previewNavBar, imagesShowCae };
