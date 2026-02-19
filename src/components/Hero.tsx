@@ -23,7 +23,7 @@ export default function Hero() {
 
         <p className="mt-6  sm:text-md md:text-lg">
           Desenvolvedor Full Stack especializado em JavaScript/TypeScript, com
-          foco em soluções robustas usando Node, React, Next e MySql/MongoDb.
+          foco em soluções robustas usando Node, React, Next e MySql/PostgreSQL.
         </p>
 
         {/* Botões */}
