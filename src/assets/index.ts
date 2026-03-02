@@ -14,6 +14,7 @@ import react from "../assets/img/icones/react.png";
 import tailwind from "../assets/img/icones/tailwind.png";
 import dockerGif from "../assets/img/docker.gif";
 import reactGif from "../assets/img/react.gif";
+import protocoloseco from "../assets/projects/protocoloseco.png";
 
 // preview
 import contact from "./preview/contact.png";
@@ -64,6 +65,7 @@ const imagesProjects = {
   elitePizzaria,
   SmartStock,
   brasilnow,
+  protocoloseco,
 };
 
 export { imagesSkills, imagesProjects, previewNavBar, imagesShowCae };

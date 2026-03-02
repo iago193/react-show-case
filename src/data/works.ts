@@ -4,6 +4,22 @@ import gallery from "../utils/images-gallery";
 
 const works = [
   {
+    title: "Protocolo Seco",
+    description:
+      "Protocolo Seco é um método prático e estratégico focado na redução de gordura corporal de forma rápida e eficiente, sem dietas extremas ou sofrimento. combinações alimentares inteligentes e um plano estruturado para acelerar o processo de emagrecimento.",
+    image: imagesProjects.protocoloseco,
+    features: [
+      { name: "JavaScript", color: colors.JavaScriptColor },
+      { name: "react", color: colors.NextColor },
+      { name: "TypeScript", color: colors.TypeScriptColor },
+      { name: "Tailwind", color: colors.TailwindColor },
+    ],
+
+    url: "",
+    gallery: gallery.protocoloseco,
+  },
+
+  {
     title: "BrasilNow",
     description:
       "BrasilNow é um site de notícias desenvolvido com Next.js, React e TypeScript, focado em consumo de APIs e renderização dinâmica de conteúdo. A aplicação consome feeds RSS para exibir notícias atualizadas por categoria (Geral, Economia, Política, Mundo e Saúde).",
@@ -12,7 +28,7 @@ const works = [
       { name: "JavaScript", color: colors.JavaScriptColor },
       { name: "Next", color: colors.NextColor },
       { name: "TypeScript", color: colors.TypeScriptColor },
-      { name: "Tailwind", color: colors.TailwindColor }
+      { name: "Tailwind", color: colors.TailwindColor },
     ],
 
     url: "https://github.com/iago193/brasilnow.git",
