@@ -3,6 +3,22 @@ import colors from "./colors";
 import gallery from "../utils/images-gallery";
 
 const works = [
+    {
+    title: "Agente de IA",
+    description:
+      "Agente de IA desenvolvido para atendimento automatizado da NEW MARKET, focado em suporte ao cliente em mercados autônomos.",
+    image: imagesProjects.n8n,
+    features: [
+      { name: "n8n", color: colors.NextColor },
+      { name: "SupaBase", color: colors.NodeColor },
+      { name: "PostgreSql", color: colors.NodeColor },
+      { name: "Docker", color: colors.DockerColor },
+    ],
+
+    url: "",
+    gallery: gallery.n8n,
+  },
+
   {
     title: "Protocolo Seco",
     description:

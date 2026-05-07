@@ -137,7 +137,7 @@ export default function MyProject() {
 
               <p className="text-[12px] mt-4 px-4">{work.description}</p>
 
-              <div className="flex flex-wrap px-4 gap-2 mt-6 text-[10px]">
+              <div className="flex flex-wrap px-4 gap-2 mt-6 text-[12px]">
                 {work.features.map((feature, i) => (
                   <span key={i} style={{ color: feature.color }}>
                     {feature.name}

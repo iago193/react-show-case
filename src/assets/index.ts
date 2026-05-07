@@ -29,6 +29,7 @@ import schooldesk from "../assets/projects/schooldesk.jpeg";
 import elitePizzaria from "../assets/projects/elite-pizzaria.jpeg";
 import SmartStock from "../assets/projects/SmartStock.png";
 import brasilnow from "../assets/projects/brasilnow.png";
+import n8n from "../assets/projects/n8n.png";
 
 const previewNavBar = {
   contact,
@@ -66,6 +67,7 @@ const imagesProjects = {
   SmartStock,
   brasilnow,
   protocoloseco,
+  n8n
 };
 
 export { imagesSkills, imagesProjects, previewNavBar, imagesShowCae };
