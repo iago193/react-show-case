@@ -5,11 +5,36 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type SkillKey = keyof typeof imagesSkills;
 
+// Nome de exibição de cada tecnologia, mostrado embaixo do carrossel
+const skillLabels: Record<SkillKey, string> = {
+  css: "CSS",
+  html: "HTML",
+  js: "JavaScript",
+  ts: "TypeScript",
+  mysql: "MySQL",
+  postgres: "PostgreSQL",
+  mongo: "MongoDB",
+  git: "Git",
+  github: "GitHub",
+  react: "React",
+  next: "Next.js",
+  node: "Node.js",
+  nestjs: "NestJS",
+  express: "Express",
+  docker: "Docker",
+  tailwind: "Tailwind CSS",
+  csharp: "C#",
+  dotnet: ".NET",
+  flutter: "Flutter",
+  dart: "Dart",
+};
+
 export default function SkillsSection() {
 
   const allSkills: SkillKey[] = [
-    "css","html","js","ts","mysql","mongo","git","github",
-    "react","next","node","docker","tailwind"
+    "css","html","js","ts","mysql","postgres","mongo","git","github",
+    "react","next","node","nestjs","express","docker","tailwind",
+    "csharp","dotnet","flutter","dart"
   ];
 
   const [index, setIndex] = useState(0);
@@ -83,6 +108,8 @@ export default function SkillsSection() {
 
           <button
             onClick={()=>paginate(-1)}
+            type="button"
+            aria-label="Habilidade anterior"
             className="absolute left-4 z-1 bg-blue-700/30 hover:bg-blue-700/50 p-3 rounded-full"
           >
             <ChevronLeft size={26}/>
@@ -117,6 +144,10 @@ export default function SkillsSection() {
                 <motion.img
                   key={skill}
                   src={imagesSkills[skill]}
+                  loading="lazy"
+                  decoding="async"
+                  width={120}
+                  height={120}
                   initial={{ opacity:0 }}
                   animate={
                     isInView ? {
@@ -145,6 +176,8 @@ export default function SkillsSection() {
 
           <button
             onClick={()=>paginate(1)}
+            type="button"
+            aria-label="Próxima habilidade"
             className="absolute right-4 z-1 bg-blue-700/30 hover:bg-blue-700/50 p-3 rounded-full"
           >
             <ChevronRight size={26}/>
@@ -152,10 +185,21 @@ export default function SkillsSection() {
 
         </div>
 
-        <div className="flex gap-2 mt-6">
-          {allSkills.map((_, i) => (
+        {/* Nome da tecnologia atualmente centralizada no carrossel */}
+        <motion.p
+          key={allSkills[index]}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="text-emerald-400 font-semibold vend-sans text-lg mt-6"
+        >
+          {skillLabels[allSkills[index]]}
+        </motion.p>
+
+        <div className="flex gap-2 mt-4">
+          {allSkills.map((skill, i) => (
             <div
-              key={i}
+              key={skill}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 i === index
                   ? "bg-white scale-125"

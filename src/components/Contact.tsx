@@ -19,22 +19,32 @@ export default function Contact() {
   });
 
   useEffect(() => {
-    const systemPrefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-    if (theme === "dark" || (theme === "system" && systemPrefersDark)) {
-      document.body.style.backgroundColor = "rgb(6, 9, 26)";
-      document.body.style.color = "#eef1f7";
-    } else if (
-      theme === "light" ||
-      (theme === "system" && !systemPrefersDark)
-    ) {
-      document.body.style.backgroundColor = "rgb(247, 248, 255)";
-      document.body.style.color = "#1f1d1d";
-    }
+    const applyTheme = () => {
+      const isDark =
+        theme === "dark" || (theme === "system" && mediaQuery.matches);
 
+      // Classe "dark" no <html>, para permitir estilização via Tailwind (dark:)
+      document.documentElement.classList.toggle("dark", isDark);
+
+      if (isDark) {
+        document.body.style.backgroundColor = "rgb(6, 9, 26)";
+        document.body.style.color = "#eef1f7";
+      } else {
+        document.body.style.backgroundColor = "rgb(247, 248, 255)";
+        document.body.style.color = "#1f1d1d";
+      }
+    };
+
+    applyTheme();
     localStorage.setItem("theme", theme);
+
+    // Se o usuário escolheu "system", reage a mudanças no tema do SO em tempo real
+    if (theme === "system") {
+      mediaQuery.addEventListener("change", applyTheme);
+      return () => mediaQuery.removeEventListener("change", applyTheme);
+    }
   }, [theme]);
 
   const handleSettings = (theme: string) => {
@@ -156,6 +166,8 @@ export default function Contact() {
             }`}
             onClick={() => handleSettings("light")}
             type="button"
+            aria-label="Ativar modo claro"
+            aria-pressed={theme === "light"}
           >
             <MdOutlineLightMode size={25} />
           </button>
@@ -168,6 +180,8 @@ export default function Contact() {
             }`}
             onClick={() => handleSettings("system")}
             type="button"
+            aria-label="Usar o tema do sistema"
+            aria-pressed={theme === "system"}
           >
             <HiOutlineComputerDesktop size={25} />
           </button>
@@ -180,6 +194,8 @@ export default function Contact() {
             }`}
             onClick={() => handleSettings("dark")}
             type="button"
+            aria-label="Ativar modo escuro"
+            aria-pressed={theme === "dark"}
           >
             <MdOutlineDarkMode size={25} />
           </button>

@@ -26,8 +26,10 @@ Este é o meu portfólio profissional, desenvolvido recentemente para apresentar
     - Acessar código no GitHub
     - Ver projeto online (quando disponível)
     - Abrir galeria de fotos do projeto
+- Mensagens de feedback via Toastify (ex.: ao tentar acessar um repositório privado).
 - Sistema de galeria com:
   - Modal animado
+  - Imagens carregadas sob demanda (lazy loading), só quando a galeria é aberta
   - Navegação entre imagens
   - Fechamento por clique externo
 
@@ -37,9 +39,8 @@ Este é o meu portfólio profissional, desenvolvido recentemente para apresentar
 - Animação ao entrar na área visível.
 
 ### 🔹 5. Contato
-- Formulário funcional com validação.
-- Integração com e-mail/API (opcional).
-- Mensagens de feedback via Toastify.
+- Links diretos para contato: WhatsApp, e-mail, GitHub e LinkedIn.
+- Seletor de tema (claro / escuro / sistema), com preferência salva no navegador.
 - Links para redes profissionais:
 
   - GitHub  

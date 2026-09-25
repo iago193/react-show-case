@@ -12,24 +12,32 @@ import next from "../assets/img/icones/next.png";
 import node from "../assets/img/icones/node.png";
 import react from "../assets/img/icones/react.png";
 import tailwind from "../assets/img/icones/tailwind.png";
+import csharp from "../assets/img/icones/csharp.png";
+import flutter from "../assets/img/icones/flutter.png";
+import dart from "../assets/img/icones/dart.png";
+import dotnet from "../assets/img/icones/dotnet.png";
+import nestjs from "../assets/img/icones/nestjs.png";
+import express from "../assets/img/icones/express.png";
+import postgres from "../assets/img/icones/postgres.png";
 import dockerGif from "../assets/img/docker.gif";
 import reactGif from "../assets/img/react.gif";
-import protocoloseco from "../assets/projects/protocoloseco.png";
+import protocoloseco from "../assets/projects/protocoloseco.webp";
 
 // preview
-import contact from "./preview/contact.png";
-import hero from "./preview/hero.png";
-import projects from "./preview/projects.png";
-import skills from "./preview/skills.png";
-import work from "./preview/work.png";
+import contact from "./preview/contact.webp";
+import hero from "./preview/hero.webp";
+import projects from "./preview/projects.webp";
+import skills from "./preview/skills.webp";
+import work from "./preview/work.webp";
 
 // images from projects
-import reactShowCase from "../assets/projects/react-show-case.png";
-import schooldesk from "../assets/projects/schooldesk.jpeg";
-import elitePizzaria from "../assets/projects/elite-pizzaria.jpeg";
-import SmartStock from "../assets/projects/SmartStock.png";
-import brasilnow from "../assets/projects/brasilnow.png";
-import n8n from "../assets/projects/n8n.png";
+import reactShowCase from "../assets/projects/react-show-case.webp";
+import schooldesk from "../assets/projects/schooldesk.webp";
+import elitePizzaria from "../assets/projects/elite-pizzaria.webp";
+import SmartStock from "../assets/projects/SmartStock.webp";
+import brasilnow from "../assets/projects/brasilnow.webp";
+import n8n from "../assets/projects/n8n.webp";
+import lovyon from "../assets/projects/lovyon.webp";
 
 const previewNavBar = {
   contact,
@@ -58,6 +66,13 @@ const imagesSkills = {
   node,
   react,
   tailwind,
+  csharp,
+  flutter,
+  dart,
+  dotnet,
+  nestjs,
+  express,
+  postgres,
 };
 
 const imagesProjects = {
@@ -67,6 +82,7 @@ const imagesProjects = {
   SmartStock,
   brasilnow,
   protocoloseco,
+  lovyon,
   n8n
 };
 

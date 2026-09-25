@@ -1,9 +1,27 @@
 import { imagesProjects } from "../assets";
 import colors from "./colors";
-import gallery from "../utils/images-gallery";
 
 const works = [
-    {
+  {
+    title: "Lovyon",
+    description:
+      "Lovyon é uma plataforma completa de descoberta e venda de ingressos para eventos, estilo Fever/GetYourGuide, que desenvolvo do zero como freelancer, atuando no back-end e no front-end. Cobre toda a jornada, da criação do evento pelo produtor até a compra pelo cliente final, pensada para o mercado europeu (euros, cidades europeias e interface em 5 idiomas: inglês, português, espanhol, francês e italiano).",
+    image: imagesProjects.lovyon,
+    features: [
+      { name: "next", color: colors.NextColor },
+      { name: "javascript", color: colors.JavaScriptColor },
+      { name: "TypeScript", color: colors.TypeScriptColor },
+      { name: "PostgreSql", color: colors.NodeColor },
+      { name: "Node", color: colors.NodeColor },
+      { name: "Docker", color: colors.DockerColor },
+      { name: "Express", color: colors.ExpressColor },
+    ],
+
+    url: "https://lovyon.com/",
+    galleryKey: "lovyon",
+  },
+
+  {
     title: "Agente de IA",
     description:
       "Agente de IA desenvolvido para atendimento automatizado da NEW MARKET, focado em suporte ao cliente em mercados autônomos.",
@@ -16,7 +34,7 @@ const works = [
     ],
 
     url: "",
-    gallery: gallery.n8n,
+    galleryKey: "n8n",
   },
 
   {
@@ -32,7 +50,7 @@ const works = [
     ],
 
     url: "",
-    gallery: gallery.protocoloseco,
+    galleryKey: "protocoloseco",
   },
 
   {
@@ -48,7 +66,7 @@ const works = [
     ],
 
     url: "https://github.com/iago193/brasilnow.git",
-    gallery: gallery.brasilnow,
+    galleryKey: "brasilnow",
   },
 
   {
@@ -65,7 +83,7 @@ const works = [
     ],
 
     url: "https://github.com/iago193/smart-stock-app.git",
-    gallery: gallery.smartStock,
+    galleryKey: "smartStock",
   },
 
   {
@@ -81,7 +99,7 @@ const works = [
     ],
 
     url: "https://github.com/iago193/react-show-case",
-    gallery: gallery.reactShowCase,
+    galleryKey: "reactShowCase",
   },
 
   {
@@ -98,7 +116,7 @@ const works = [
       { name: "Node", color: colors.NodeColor },
     ],
     url: "https://github.com/iago193/SchoolDesk",
-    gallery: gallery.schooldesk,
+    galleryKey: "schooldesk",
   },
 
   {
@@ -113,7 +131,7 @@ const works = [
       { name: "CSS", color: colors.CSSColor },
     ],
     url: "",
-    gallery: gallery.elitePizzaria,
+    galleryKey: "elitePizzaria",
   },
 ];
 

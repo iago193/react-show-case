@@ -11,7 +11,7 @@ export default function Hero() {
 
       {/* Texto */}
       <div className="lg:w-1/2 w-full text-center lg:text-left">
-        <p className="text-[#1f1f1f] px-2 mb-4 text-md">Web Developer</p>
+        <p className="text-[#1f1f1f] px-2 mb-4 text-md">Full Stack Developer</p>
 
         <h2 className="font-bold vend-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           Olá, tudo bom?
@@ -21,9 +21,11 @@ export default function Hero() {
           Sou o Iago Bruno
         </h2>
 
-        <p className="mt-6  sm:text-md md:text-lg">
-          Desenvolvedor Full Stack especializado em JavaScript/TypeScript, com
-          foco em soluções robustas usando Node, React, Next e MySql/PostgreSQL.
+        <p className="mt-6 sm:text-md md:text-lg">
+          Sou de Macaíba (RN) e construo aplicações completas — do banco de
+          dados à interface — com Node.js, NestJS, .NET, React, Next.js e
+          Flutter. Gosto de resolver problemas reais com arquitetura limpa,
+          automações inteligentes e código com propósito.
         </p>
 
         {/* Botões */}
@@ -52,16 +54,18 @@ export default function Hero() {
 
       {/* Imagem */}
       <div className="lg:w-1/2 w-full flex justify-center relative">
-      <img 
+      <img
       className="w-16 h-24 opacity-40 absolute top-0 left-0"
-      src={imagesShowCae.dockerGif} alt="docker" />
-            <img 
+      src={imagesShowCae.dockerGif} alt="docker" width={64} height={96} decoding="async" fetchPriority="low" />
+            <img
       className="w-24 h-24 opacity-40 absolute bottom-0 right-0"
-      src={imagesShowCae.reactGif} alt="react" />
+      src={imagesShowCae.reactGif} alt="react" width={96} height={96} decoding="async" fetchPriority="low" />
         <img
           className="rounded-full max-w-[450px] w-[90%] sm:w-[60%] lg:w-[500px] shadow-lg bubble-img border-4 border-emerald-400"
           src={Logo}
           alt="Iago Bruno"
+          fetchPriority="high"
+          decoding="async"
         />
       </div>
     </section>

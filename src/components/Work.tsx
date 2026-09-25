@@ -50,13 +50,12 @@ export default function MyWork() {
           </div>
           <h2 className={`text-emerald-400 vend-sans font-bold text-4xl`}>Backend</h2>
           <p className={`mt-10 text-md`}>
-            Atuo na integração entre o client-side e o banco de dados por meio
-            de APIs bem estruturadas e escaláveis. Dou ênfase à performance das
-            aplicações, utilizando recursos como programação assíncrona,
-            execução paralela e processamento sob demanda em Node.js. Adoto
-            práticas de TDD para garantir confiabilidade e mantenho uma
-            arquitetura limpa e organizada, sempre alinhada aos princípios de
-            Clean Code.
+            Construo APIs REST com Node.js, NestJS, Express e .NET, ligando o
+            client-side ao banco de dados de forma organizada e escalável.
+            Trabalho com PostgreSQL, MySQL e MongoDB conforme a necessidade do
+            projeto, e crio automações e agentes de IA com n8n para eliminar
+            trabalho manual. Mantenho uma arquitetura limpa, alinhada aos
+            princípios de Clean Code.
           </p>
         </motion.div>
 
@@ -81,13 +80,12 @@ export default function MyWork() {
           </div>
           <h2 className={`text-emerald-400 vend-sans font-bold text-4xl`}>Frontend</h2>
           <p className={`mt-10 text-md`}>
-            Desenvolvo interfaces modernas, responsivas e de alta performance,
-            com foco em interatividade e experiência do usuário. Utilizo
-            componentes reutilizáveis e estilos consistentes, sempre seguindo
-            boas práticas de UI/UX. Mantenho uma estrutura de projeto bem
-            organizada, com pastas e componentes claramente definidos,
-            garantindo fácil manutenção, escalabilidade e uma estética
-            profissional em cada aplicação.
+            Desenvolvo interfaces modernas, responsivas e de alta performance
+            com React e Next.js, com foco em interatividade e experiência do
+            usuário. Uso Tailwind CSS e componentes reutilizáveis, mantendo o
+            projeto bem organizado e fácil de manter. Levo essa mesma atenção
+            a detalhes para o mobile, criando apps multiplataforma com
+            Flutter.
           </p>
         </motion.div>
       </div>
@@ -102,26 +100,24 @@ export default function MyWork() {
       >
         <h1 className="text-emerald-400 vend-sans font-bold text-4xl">Meu Trabalho</h1>
         <p className={`mt-10 text-lg`}>
-          Sou desenvolvedor Full Stack focado em criar aplicações web modernas e
-          eficientes. Trabalho com JavaScript e TypeScript, utilizando Node.js
-          no backend e React no frontend. Tenho experiência no desenvolvimento
-          de APIs, integração de sistemas e uso do SQL Server como banco de
-          dados principal. Atualmente, estou aprimorando minhas habilidades em
-          Inteligência Artificial, Machine Learning, criação de dashboards
-          interativos em React e otimização de performance no backend com
-          Node.js.
+          Sou desenvolvedor Full Stack, de Macaíba (RN), e gosto de acompanhar
+          o projeto do início ao fim — do modelo de dados até a tela que o
+          usuário toca. Trabalho principalmente com JavaScript e TypeScript:
+          Node.js, NestJS e .NET no backend, React e Next.js no frontend, e
+          Flutter quando o produto pede um app mobile. Uso PostgreSQL, MySQL
+          e MongoDB no dia a dia, e tenho me dedicado a automações e agentes
+          de IA com n8n para integrar sistemas e economizar tempo. Estou
+          aberto a oportunidades remotas, híbridas ou presenciais.
         </p>
 
-        <button className="mt-20 transition-transform duration-200 hover:scale-105">
-          <a
-            href="/Curriculo_Iago_Bruno.pdf"
-            className="rounded-full p-4 py-3 shadow-2xl bg-blue-400 hover:bg-blue-600 transition duration-300 text-amber-50"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Currículo
-          </a>
-        </button>
+        <a
+          href="/Curriculo_Iago_Bruno.pdf"
+          className="mt-20 inline-block rounded-full p-4 py-3 shadow-2xl bg-blue-400 hover:bg-blue-600 transition-all duration-300 hover:scale-105 text-amber-50"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Currículo
+        </a>
       </motion.div>
     </section>
   );

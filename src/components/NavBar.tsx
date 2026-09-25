@@ -19,6 +19,8 @@ export function Header() {
         <button
           className="text-gray-300 text-lg flex items-center gap-4 relative px-2"
           type="button"
+          aria-expanded={isNavBarOpen}
+          aria-label="Abrir menu de navegação"
           onClick={toggleNavBar}
         >
           Menu
@@ -82,6 +84,10 @@ export function Header() {
                 className={`${style.previewNavBar}`}
                 src={previewNavBar.hero}
                 alt="hero"
+                loading="lazy"
+                decoding="async"
+                width={450}
+                height={300}
               />
               Home
             </Link>
@@ -97,6 +103,10 @@ export function Header() {
                 className={`${style.previewNavBar}`}
                 src={previewNavBar.work}
                 alt="work"
+                loading="lazy"
+                decoding="async"
+                width={450}
+                height={300}
               />
               Sobre
             </Link>
@@ -107,6 +117,10 @@ export function Header() {
                 className={`${style.previewNavBar}`}
                 src={previewNavBar.projects}
                 alt="projects"
+                loading="lazy"
+                decoding="async"
+                width={450}
+                height={300}
               />
               Projetos
             </Link>
@@ -122,6 +136,10 @@ export function Header() {
                 className={`${style.previewNavBar}`}
                 src={previewNavBar.skills}
                 alt="skills"
+                loading="lazy"
+                decoding="async"
+                width={450}
+                height={300}
               />
               Habilidades
             </Link>
@@ -132,6 +150,10 @@ export function Header() {
                 className={`${style.previewNavBar}`}
                 src={previewNavBar.contact}
                 alt="contact"
+                loading="lazy"
+                decoding="async"
+                width={450}
+                height={300}
               />
               Contato
             </Link>

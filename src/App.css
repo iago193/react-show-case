@@ -1,19 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+/* As fontes (Vend Sans, Google Sans Code, Zalando Sans) agora são carregadas via
+   <link> no index.html, com preconnect, em vez de @import aqui. Um @import de CSS
+   só é descoberto depois que o próprio arquivo CSS termina de baixar, o que atrasa
+   o início do download das fontes; um <link> no HTML é descoberto imediatamente. */
 @import "tailwindcss";
 
 .vend-sans {
   font-family: "Vend Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: weight;
   font-style: normal;
+  /* peso controlado pelas classes utilitárias do Tailwind (font-bold etc.) em cada elemento */
 }
 
 .google-sans-code {
   font-family: "Google Sans Code", monospace;
   font-optical-sizing: auto;
-  font-weight: weight;
   font-style: normal;
 }
 
